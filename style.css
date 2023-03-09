@@ -1,7 +1,9 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
 *{
     margin : 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: Roboto;
     box-sizing: border-box;
 }
 
@@ -23,7 +25,6 @@ body {
     width: 50%;
     animation: movedown 1s linear forwards;
     opacity: 0;
-    
 }
 
 .text-box{
@@ -43,15 +44,21 @@ body {
     left: 50%;
 }
 
-.container img{
+.circulo {
     position: absolute;
     width: 40px;
+    height: 40px;
     border-radius: 50%;
     right: -20px;
     top: 32px;
     z-index: 10;
     background-color: #b97b35;
-    
+}
+
+.circulo > p {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
 }
 
 @keyframes movedown {
@@ -76,7 +83,7 @@ body {
     animation-delay: 2.1s;
 }
 
-.right-container img{
+.right-container .circulo{
     left: -20px;
 }
 
@@ -95,7 +102,6 @@ body {
 
 .text-box h2{
     font-weight: 600;
-
 }
 
 .text-box small{
@@ -139,7 +145,7 @@ body {
 
 @media screen and (max-width: 600px){
     .timeline{
-        margin: 50px auto;
+        margin: 60px auto;
     }
 
     .timeline::after{
@@ -159,14 +165,14 @@ body {
     .right-container{
         left:0;
     }
-    .left-container img, .right-container img{
+    .left-container .circulo, .right-container .circulo{
         left: 10px;
     }
 
     .left-container-arrow, .right-container-arrow{
-        border-right:15px solid #fff;
+        border-right:15px solid #b97b35;
         border-left: 0;
-        left: -15px;
+        left: -35px;
     }
 
 }
